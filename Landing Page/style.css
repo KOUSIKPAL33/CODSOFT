@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: whitesmoke;
+    z-index: 100;
+}
+
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color: whitesmoke;
+    margin: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-bar .logo img{
+    height: 60%;
+    width: 50%;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+}
+
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-links li{
+    margin: 0 5px;
+    list-style: none;
+}
+
+.nav-links li a{
+    display: inline-block;
+    position: relative;
+    font-size: 23px;
+    font-weight: 500;
+    color:hsl(0, 0%, 21%);
+    text-decoration: none;
+    padding: 5px;
+    opacity: 0;
+    animation: slidetop 0.5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.submenu{
+    display: none;
+    position: absolute;
+    top: 101%;
+    color: hsl(0, 0%, 21%);
+    background-color:whitesmoke;
+    font-size: 1rem;
+}
+.res:hover .submenu{
+    display: block;
+}
+
+@keyframes slidetop {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+section{
+    width: 100%;
+    padding: 2.5% 10%;
+}
+a{
+    text-decoration: none;
+}
+
+section h2{
+    color: hsl(0, 0%, 21%);
+    text-align: center;
+    font-size: 3rem;
+    margin: 20px;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 70px;
+}
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    color: rgb(94, 75, 75);
+
+}
+
+.btn {
+    padding: 13px 25px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    max-width: max-content;
+    background-color: white;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: 2px solid hsl(39, 96%, 48%);
+}
+.btn a{
+    color: red;
+    font-size: 1rem;
+}
+
+.btn:hover{
+    background-color: rgb(192, 212, 41);
+}
+.btn a:hover{
+    color: white;
+}
+.banner-content p {
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 47%);
+}
+
+.hero-image img {
+    height: 476px;
+    width: 450px;
+    background-image: url(images/hero-bg.png);
+}
+
+
+.instruction-section p{
+    font-size: 1.2rem;
+    text-align: center;
+    color: hsl(0, 0%, 47%);
+    width: 85%;
+}
+.instructions{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 25px;
+    margin: 30px 0px;
+
+}
+.instruction-card span{
+    font-size: 3rem;
+    color: hsl(0, 0%, 47%);
+}
+.instruction-card h3{
+    font-size: 1.7rem;
+}
+.instruction-card p{
+    font-size: 1rem;
+    text-align: center;
+    color: hsl(0, 0%, 47%);
+    width: 85%;
+}
+
+/* -----------Resturants----------- */
+
+.resturants h1{
+    color: rgb(91, 114, 102);
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 35px 0px;
+}
+.resturant-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 25px;
+    margin: 50px 0px;
+}
+
+.resturant-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.resturant-card img{
+    height: 265px;
+    width: 400px;
+}
+.resturant-card h3{
+    text-align: center;
+    color: hsla(0, 0%, 0%, 0.7);
+    font-size: 1.8rem;
+}
+.resturant-card p{
+    font-size: 1.2rem;
+    text-align: center;
+    color: hsl(0, 1%, 27%);
+    width: 350px;
+}
+.buttn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ----------Services------------ */
+.services{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 25px;
+}
+
+
+.abc {
+    position: relative;
+    height: 180px;
+    gap: 8px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 4px hsla(0, 0%, 0%, 0.05);
+    background-color: beige;
+}
+
+.abc h3 {
+    position: absolute;
+    top: 28%;
+    left: 0%;
+    font-size:2.5rem;
+    text-align: center;
+    color: hsl(0, 99%, 53%);
+    border-radius: 10px;
+    box-shadow: 0 0 30px 4px hsla(0, 0%, 0%, 0.05);
+}
+
+.services span {
+    position: absolute;
+    left: 13%;
+    top: 25%;
+    color: hsl(0, 99%, 53%);
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+
+.services p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: hsl(0, 0%, 47%);
+    margin-top: 10px;
+    position: absolute;
+    top: 36%;
+    left: 52%;
+}
+
+.partnership{
+    background-color: rgb(90, 61, 61);
+}
+.partnership h2{
+    color: white;
+    font-size: 3.4rem;
+    margin-bottom: 50px;
+}
+.partner-container{
+    display: flex;
+    gap: 40px;
+
+}
+.partnership-card  img{
+    height: 400px;
+    width: 500px;
+    border-radius: 40px;
+    border: 8px solid chartreuse;
+}
+
+/* ---------Subscribe----------- */
+
+.subscribe{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+.subscribe-image img{
+    height:400px;
+    width: 460px;
+}
+.subscribe-content input{
+    height: 70px;
+    width: 530px;
+    margin:30px 0px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 30px  hsla(0, 0%, 0%, 0.10);
+    font-size: 1.2rem;
+    padding: 0px 25px;
+}
+.subscribe-content input::placeholder{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* -------Footer--------- */
+
+.footer{
+    background-color: rgb(83, 147, 177);
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1.2fr 1fr;
+    column-gap: 35px;
+}
+.footer-container .description h2{
+    color: hsl(256, 61%, 21%);
+    margin-top: 0px;
+    margin-left: 0px;
+
+}
+.footer-container .description p{
+    color: hsl(257, 90%, 4%);
+    font-size: 1.2rem;
+    line-height: 22px;
+}
+
+.footer-container h3{
+    color: hsl(218, 81%, 15%);
+    font-size: 2.2rem;
+    margin:10px;
+
+}
+.useful-links,.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.useful-links a,.contact p,a,span{
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: hsl(0, 17%, 91%);
+    
+}
+.links{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    margin-top: 32px;
+    
+    row-gap:25px ;
+}
+.contact i{
+    font-size: 1.5rem;
+    color: hsl(257, 54%, 20%);
+
+}
+.contact .ml{
+    margin-left: 10px;
+}
+.links i{
+    font-size: 1.3rem;
+    color: hsl(264, 81%, 15%);
+    background-color: rgb(178, 185, 204);
+    padding: 10px;
+    border-radius: 10px;
+}
